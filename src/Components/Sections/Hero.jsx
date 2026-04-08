@@ -1,4 +1,5 @@
 import { RequestButton } from "@/Components/ui";
+import { getAsset } from "@/utils/getAssets.js";
 
 const Hero = () => {
   return (
@@ -8,13 +9,13 @@ const Hero = () => {
         {/* Mobile image intro*/}
         <img
           className="absolute inset-0 w-full -translate-y-[18%]"
-          src="/bg-intro-mobile.svg"
+          src={getAsset("bg-intro-mobile.svg")}
           alt=""
         />
         {/* mockups mobile */}
         <img
           className="absolute px-6 -translate-y-[29%]"
-          src="/image-mockups.png"
+          src={getAsset("image-mockups.png")}
           alt=""
         />
       </div>
@@ -24,14 +25,14 @@ const Hero = () => {
         <div className="absolute inset-0 overflow-hidden">
           <img
             className="absolute translate-x-[24%] -translate-y-[24%] h-[989px] "
-            src="/bg-intro-desktop.svg"
+            src={getAsset("bg-intro-desktop.svg")}
             alt="intro image"
           />
         </div>
         <div className="absolute right-0 top-0 overflow-hidden">
           <img
             className="translate-x-[18%] -translate-y-[18%]"
-            src="/image-mockups.png"
+            src={getAsset("image-mockups.png")}
             alt=""
           />
         </div>

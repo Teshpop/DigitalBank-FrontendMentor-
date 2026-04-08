@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { RequestButton, NavbarButton } from "@/Components/ui";
 import { Navbarlinks } from "@/const.js";
+import { getAsset } from "@/utils/getAssets.js";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -17,7 +18,11 @@ const Navbar = () => {
   return (
     <>
       <nav className="px-6 py-5 lg:px-12 xl:px-40.5 lg:py-5 flex flex-row justify-between items-center bg-neutral-white relative z-50">
-        <img className="" src="/logo-dark.svg" alt="digitalbank logo" />
+        <img
+          className=""
+          src={getAsset("logo-dark.svg")}
+          alt="digitalbank logo"
+        />
 
         {/* Mobile */}
         <button
