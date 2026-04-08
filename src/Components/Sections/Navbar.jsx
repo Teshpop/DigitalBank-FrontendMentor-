@@ -33,7 +33,11 @@ const Navbar = () => {
         >
           <img
             className=""
-            src={active ? "/icon-close.svg" : "/icon-hamburger.svg"}
+            src={
+              active
+                ? getAsset("icon-close.svg")
+                : getAsset("icon-hamburger.svg")
+            }
             alt="menu icon"
           />
         </button>
